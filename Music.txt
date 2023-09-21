@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+<title>Music</title>
+<style>
+ body{
+background-image:url("file:///C:/Users/user/Downloads/New%20folder/image.png");
+background-size: cover;
+    background-repeat: no-repeat;
+	background-attachment:fixed;
+	scroll-behavior:smooth;
+	}
+	.navbar{
+	width:80%;
+	margin:auto;
+	padding:15px ;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	}
+	.logo{
+	width:80px;
+	
+	}
+	
+	.navbar ul li{
+	display:inline-block;
+	
+	}
+	.navbar ul li a {
+	color:#5f5f5f;
+	font-size:15px;
+	margin: 0 20px;
+	text-decoration:none;
+	
+	}
+	
+	
+	.content{
+	width:100%;
+	position:absolute;
+	top:30%;
+	}
+	.left-col{
+	margin-left:6%;
+	}
+	.left-col h1{
+	font-size:120px;
+	color:#fff;
+	line-height:110px;
+	float:left;
+	}
+	.right-col{
+	float:right;
+	margin-right:6%;
+	margin-top:120px;
+	
+	display:flex;
+	
+	align-item:center;
+	}
+	.right-col p {
+	font-size:18px;
+	color:#5f5f5f
+	font-weight:400;
+	margin-right:15px;
+	}
+	#icon{
+	width:80px;
+	cursor:pointer;
+	}
+	
+ </style>
+</head>
+<body>
+<div class="container">
+<div class="navbar">
+<img src ="file:///C:/Users/user/Downloads/New%20folder/logo.png" class="logo">
+<ul>
+<li><a href="">Home</a></li>
+ <li><a href="">About</a></li>
+ <li><a href="">Specification</a></li>
+ <li><a href="">Products</a></li>
+ <li><a href="">Connect</a></li>
+ </ul>
+ </div>
+ <div class="content">
+ <div class="left-col">
+ <h1>THE <br>REAL <br>SOUND</h1>
+ </div>
+ <div class="right-col">
+ <p>Click here to listen</p>
+ <img src="file:///C:/Users/user/Downloads/New%20folder/play.png" id="icon">
+ </div>
+ 
+ </div>
+ </div>
+ <audio id="Song">
+ <source src="Heeriye.mp3.mp3" type="audio/mp3">
+ </audio>
+ <script>
+ var Song = document.getElementById("Song");
+ var icon = document.getElementById("icon");
+ icon.onclick = function(){
+    if(Song.paused){
+        Song.play();
+        icon.src="file:///C:/Users/user/Pictures/Saved%20Pictures/pause.png";
+    }else{
+        Song.pause()
+        icon.src="file:///C:/Users/user/Pictures/Saved%20Pictures/play.png";
+        
+         }
+
+ }
+ </script>
+ </body>
+ </html>
+ 
